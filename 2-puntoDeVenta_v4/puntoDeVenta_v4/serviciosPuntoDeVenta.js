@@ -8,10 +8,14 @@ calcularIVA=function(monto){
  IVA=(monto*12)/100;
  return IVA;
 }
-calcularSubtotal=function(precio, cantidad){
-    return precio * cantidad
+calcularSubtotal=function(precio,cantidad){
+    let subtotal;
+    subtotal=precio*cantidad;
+    return subtotal;
 }
 
-calcularTotal=function(subtotal, descuento, IVA){
-    return subtotal - descuento + IVA
+calcularTotal=function(subtotal,descuento,IVA){
+    let Total;
+    Total=(subtotal+IVA)-descuento;
+    return Total;
 }
