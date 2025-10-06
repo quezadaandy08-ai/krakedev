@@ -25,7 +25,7 @@ calcularValorTotal = function () {
     // Tomar en cuenta el orden de como pasa los parametos de la funcion y colocar bien
     // los parametros cuando invoca la funcion.
     //5. Mostrar valorSubtotal en el componente lblSubtotal
-    mostrarTexto("lblSubtotal",valorSubtotal);
+    mostrarTexto("lblSubtotal",valorSubtotal.toFixed(2));
     // Utilizar mostrarTexto
         /*
         Caso de prueba: 
@@ -37,7 +37,7 @@ calcularValorTotal = function () {
     //6. Invocar a calcularValorDescuento y lo que devuelve guardar en la variable valorDescuento
      valorDescuento=calcularValorDescuento(valorSubtotal, porcentajeDescuento);
     //7. Mostrar el resultado en el componente lblDescuento
-    mostrarTexto("lblDescuento",valorDescuento);
+    mostrarTexto("lblDescuento",valorDescuento.toFixed(2));
     /*
         Caso de prueba: 
             - cantidad: 10 
@@ -50,7 +50,7 @@ calcularValorTotal = function () {
     valorIVA = calcularIva(valorSubtotal - valorDescuento);
     // El IVA debe calcularse sobre el valor del subtotal menos el descuento
     //9. Mostrar el resultado en el componente lblValorIVA
-     mostrarTexto("lblValorIVA",valorIVA);   
+     mostrarTexto("lblValorIVA",valorIVA.toFixed(2));   
         /*
             Caso de prueba: 
                 - cantidad: 10 
@@ -69,7 +69,7 @@ calcularValorTotal = function () {
     //10. Invocar a calcularTotal y lo que devuelve guardar en la variable valorTotal
     valorTotal = calcularTotal(valorSubtotal, valorDescuento, valorIVA)
     //11. Mostrar el resultado en el componente lblTotal
-    mostrarTexto("lblTotal",valorTotal);
+    mostrarTexto("lblTotal",valorTotal.toFixed(2));
     /*
         Caso de prueba: 
             - cantidad: 10
@@ -86,7 +86,8 @@ calcularValorTotal = function () {
        */
             
     //12. Mostrar un resumen en el componente lblResumen, si no existe debe agregarlo
-    
+    resumen= "Valor a pagar por " + cantidad + " " + nombreProducto +  " con " + porcentajeDescuento + "% de descuento: USD " + valorTotal;
+   mostrarTexto("lblResumen", resumen);
     /*
         Ejemplo: 
             Valor a pagar por 20 cerveza corona con 10% de descuento: USD 48.75
