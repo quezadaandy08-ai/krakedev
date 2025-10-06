@@ -5,9 +5,15 @@ saludar=function(){
     let Estatura=("txtEstatura");
     let mensajeBienvenida="Bienvenido "+Nombre+" "+Apellido;
     mostrarTexto("lblResultado",mensajeBienvenida);
-    let mostrarImg=cambiarImagen("imgSaludo","./imagenes/asd.gif")
+    cambiarImagen("imgSaludo","./imagenes/asd.gif");
+    mostrarTextoEnCaja("txtNombre"," ");
 }
 
+mostrarTextoEnCaja=function(idComponente,mensaje){
+    let componente;
+    componente=document.getElementById(idComponente);
+    componente.value=mensaje; 
+}
 cambiarImagen=function(idComponente,imagen){
     let componente;
     componente=document.getElementById(idComponente);
