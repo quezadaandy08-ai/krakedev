@@ -2,6 +2,13 @@ jugar=function(){
     let valorAletorio;
     valorAletorio=jugarDados();
     cambiarTexto("lblNumero",valorAletorio);
+    if(valorAletorio>3){
+        console.log("ES MAYOR A 3");
+        console.log("GANASTE");
+    }else{
+        console.log("ES MENOR A 3");
+        console.log("PERDISTE");
+    }
     }
 
     jugarDados=function(){
