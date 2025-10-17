@@ -18,7 +18,7 @@ body{
 .imagen{
     display: flex;
     flex:5;
-    background-color: rgba(240, 248, 255, 0.612);
+    background-color: rgba(255, 255, 255, 0.795);
     justify-content: center;
     align-items: center;
 }
@@ -77,12 +77,12 @@ h1{
     font-size: 50px;
 }
 .info{
-    font-size:40px;
-    color: skyblue;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    color: rgb(0, 136, 255);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .datos{
-    color: black;
+    color: rgba(0, 0, 0, 0.797);
     margin-left: 40px;
 }
 .win{
@@ -92,8 +92,8 @@ h1{
     text-align: center;
 }
 .ganaste{
-    color: aquamarine;
+    color: rgba(47, 255, 57, 0.882);
 }
 .perdiste{
-    color: brown;
+    color: rgba(255, 0, 0, 0.796);
 }
