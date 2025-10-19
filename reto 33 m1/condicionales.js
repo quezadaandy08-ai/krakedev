@@ -84,3 +84,24 @@ esDigito = function(caracter){
         return false;
     }
 }
+darPermiso = function(notaMatematica, notaFisica, notaGeometria){
+    if(notaMatematica > 90 || notaFisica > 90 || notaGeometria > 90){
+        return true;
+    }else{
+        return false;
+    }
+}
+otorgarPermiso = function(notaMatematica, notaFisica, notaGeometria){
+    if(notaMatematica > 90 || notaFisica > 90 && notaGeometria > 80){
+        return true;
+    }else{
+        return false;
+    }
+}
+dejarSalir = function(notaMatematica, notaFisica, notaGeometria){
+    if(notaMatematica > 90 || notaFisica > 90 || notaGeometria > 90 && notaFisica > notaMatematica){
+        return true;
+    }else{
+        return false;
+    }
+}
