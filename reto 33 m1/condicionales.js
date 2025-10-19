@@ -1,0 +1,37 @@
+calcularTazaInteres=function(ingresoAnual){
+    let tasaInteres;
+    if (ingresoAnual < 300000) {
+    tasaInteres=0.16; // 16%
+  } else if (ingresoAnual >= 300000 && ingresoAnual < 500000) {
+    tasaInteres=0.15; // 15%
+  } else if (ingresoAnual >= 500000 && ingresoAnual < 1000000) {
+    tasaInteres=0.14; // 14%
+  } else if (ingresoAnual >= 1000000 && ingresoAnual < 2000000) {
+    tasaInteres=0.13; // 13%
+  } else if(ingresoAnual >=2000000){
+    tasaInteres=0.12; // 12%
+  }
+  return tasaInteres;
+}
+calcularCapacidadPago=function(edad,ingresos,egresos){
+     let capacidadPago;
+     if(edad>50){
+        capacidadPago=(ingresos-egresos)*0.30;
+     }else if (edad<=50){
+        capacidadPago=(ingresos-egresos)*0.40;
+     }
+     return capacidadPago;
+}
+calcularDescuento=function(precio,cantidad){
+    let valorPagar;
+    if(cantidad<3){
+        valorPagar=precio;
+    }else if(cantidad>3 && cantidad==5){
+        valorPagar=precio*(2/100);
+    }else if(cantidad>=6 && cantidad==11){
+        valorPagar=precio*(3/100);
+    }else if(cantidad>12){
+        valorPagar=precio*(4/100);
+    }
+    return valorPagar;
+}
