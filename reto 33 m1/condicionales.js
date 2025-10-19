@@ -35,3 +35,25 @@ calcularDescuento=function(precio,cantidad){
     }
     return valorPagar;
 }
+determinarColesterolLDL=function(nivelColesterol){
+    let nivelColes;
+    if(nivelColesterol>100){
+        nivelColes="BUENO";
+    }else if(nivelColesterol>=100 && nivelColesterol<=129){;
+        nivelColes="CASI BUENO";
+    }else if(nivelColesterol>=130 && nivelColesterol<=159){
+        nivelColes="CASI ALTO";
+    }else if(nivelColesterol>=160){
+        nivelColes="ALTISIMO";
+    }
+    return nivelColes;
+}
+validarClave=function(clave){
+    let claveValidada;
+    claveValidada=clave.lenght;
+    if(claveValidada>=8 && claveValidada<=16){
+        return true;
+    }else{
+        return false;
+    }
+}
