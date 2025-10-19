@@ -57,3 +57,30 @@ validarClave=function(clave){
         return false;
     }
 }
+esMayuscula = function(caracter){
+    let prueba;
+    prueba = caracter.charCodeAt(0);
+    if(prueba >=65 && prueba <= 90){
+        return true;
+    }else{
+        return false;
+    }
+}
+esMinuscula = function(caracter){
+    let prueba;
+    prueba = caracter.charCodeAt(0);
+    if(prueba >= 97 && prueba <= 122 || prueba == 130 || prueba >= 160 && prueba <= 163){
+        return true;
+    }else{
+        return false;
+    }
+}
+esDigito = function(caracter){
+    let prueba;
+    prueba = caracter.charCodeAt(0);
+    if(prueba >= 48 && prueba <= 57){
+        return true;
+    }else{
+        return false;
+    }
+}
